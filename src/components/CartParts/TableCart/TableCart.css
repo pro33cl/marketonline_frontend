@@ -1,0 +1,116 @@
+.cart-table-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+
+.cart-table-header-h3{
+    font-size: 1.2rem;
+    font-weight: normal;
+    text-align: start;
+    margin-bottom: 1rem;
+}
+
+.cart-table-row{
+    width: calc(100%-1rem);
+    padding: 0.5rem;
+    height: 3rem;
+    border-radius: 0.2rem;
+    margin-bottom: 0.5rem;
+    background-color: lightgrey;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-table-row-name{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    width: 8rem;
+}
+
+.cart-table-row-img{
+    width: 1.8rem;
+    height: 1.8rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0.2rem;
+}
+
+.cart-table-row-p{
+    margin: 0.2rem;
+    font-size: 0.8rem;
+    text-align:start;
+    text-transform: capitalize;
+    font-weight: bold;
+    color: black;
+}
+
+.cart-table-row-p2{
+    margin: 0.2rem;
+    font-size: 0.8rem;
+    text-align:start;
+    text-transform: capitalize;
+    font-weight: normal;
+    color: black;
+}
+
+.cart-table-row-p3{
+    margin: 0.2rem;
+    width: 1rem;
+    font-size: 0.8rem;
+    text-align:center;
+    text-transform: capitalize;
+    font-weight: bold;
+    color: black;
+}
+
+
+.cart-table-row-numbers{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    width: 15rem;
+}
+
+.cart-table-button{
+
+    margin: 0.2rem;
+    width: auto;
+    height: 2rem;
+    font-size: 0.8rem;
+    text-align:center;
+    border-radius: 0.5rem;
+}
+
+.cart-table-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+.cart-table-footer-h2{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    text-align:start;
+    text-transform: capitalize;
+    font-weight: normal;
+    color: black;
+}
+
+.cart-table-footer-button{
+
+    margin: 0.2rem;
+    width: auto;
+    height: 2.4rem;
+    font-size: 1rem;
+    text-align: center;
+    border-radius: 1rem;
+}

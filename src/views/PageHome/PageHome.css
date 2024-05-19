@@ -1,0 +1,18 @@
+
+
+.pagehome-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+
+}
+
+.image-home{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('../../assets/images/image_home.png');
+    background-position-y: -10px;
+    height: 12rem;
+    width: 100%;
+}
