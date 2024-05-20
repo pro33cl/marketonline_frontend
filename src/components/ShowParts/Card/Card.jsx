@@ -142,7 +142,7 @@ function Card(props) {
                 <div className='card-header-image' style={type_card == "detail_card"? { width: "19rem", height:"14.25rem", backgroundImage: `url(${image})`}:{ width:"17rem", height:"12.75rem", backgroundImage: `url(${image})`}}></div>
             
             </div>
-            <div className='card-body' style={type_card == "detail_card"? {height: "auto"} : {height: "5rem"} } onClick={()=>{handlerButtonDetail(id)}}>
+            <div className='card-body' style={type_card == "detail_card"? {height: "auto"} : {height: "10rem"} } onClick={()=>{handlerButtonDetail(id)}}>
                 <div className='card-body-header'>
                     <div className='card-body-title' style={type_card == "detail_card"?
                         {width: "100%", display: "flex", flexDirection: "column", justifyContent: "start", alignItems: "start"} : 
