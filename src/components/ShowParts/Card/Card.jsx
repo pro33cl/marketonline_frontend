@@ -127,24 +127,13 @@ function Card(props) {
     };
 
 
-    const handlerCardMouseOver = function(e){
-
-        console.log(e);
-        console.log(e.target);
-
-        if(type_card == "detail_card"){
-            e.target.style.boxShadow = "none";
-        }else{
-            e.target.style.boxShadow = "3px 5px 16px -3px black";
-        }
-    }
 
     //----------------------------------------------------
     // RETURN
     //----------------------------------------------------
 
     return (
-        <div className='card border-dark' onMouseOver={handlerCardMouseOver} style={type_card == "detail_card"? {width:"100%", borderStyle: "none"} : {width: "18rem", borderStyle: "solid"}}>
+        <div className={type_card == "detail_card"? 'card border-dark':'card shadow border-dark'} style={type_card == "detail_card"? {width:"100%", borderStyle: "none"} : {width: "18rem", borderStyle: "solid"}}>
             
             <div className='card-header bg-transparent' onClick={()=>{handlerButtonDetail(id)}} 
                 style={type_card == "detail_card"? 
