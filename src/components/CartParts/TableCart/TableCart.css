@@ -48,6 +48,7 @@
     text-transform: capitalize;
     font-weight: bold;
     color: black;
+    text-overflow: ellipsis;
 }
 
 .cart-table-row-p2{
