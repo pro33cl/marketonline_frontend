@@ -3,7 +3,6 @@ import MenuUser from '../../components/UserParts/MenuUser/MenuUser';
 import FormUserData from '../../components/UserParts/FormUserData/FormUserData';
 import { useContext } from 'react';
 import { Context_User } from '../../contexts/Context_User.jsx';
-import { useEffect } from "react";
 import FormUserPassword from '../../components/UserParts/FormUserPassword/FormUserPassword.jsx';
 import {DivPage, DivHeader, DivBodyData, DivBodyPassword} from '../PageUserData/PageUserData.js';
 
@@ -39,11 +38,6 @@ function PageUserData() {
   } = receiving;
 
 
-  useEffect(() => {
-
-    console.log(user);
-
-  }, [user]);
 
   return (
     

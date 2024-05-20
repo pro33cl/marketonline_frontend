@@ -84,7 +84,7 @@ const handlerRefreshPage = function(k){
     }
 
     const handlerUserPost = async function(userPost){
-        console.log(userPost);
+        
         const userPost_actual = await ApiUserPost(userPost);
         const userPostJson = await userPost_actual.json();
 
@@ -92,7 +92,7 @@ const handlerRefreshPage = function(k){
         const userPost_result = {email: userPostJson.result.email, name: userPostJson.result.name, lastname: userPostJson.result.lastname, age: userPostJson.result.age, phone: userPostJson.result.phone};
         const userPost_status = userPost_actual.status;
         const userPost_resp = {message: userPost_message, result: userPost_result, status: userPost_status};
-        console.log(userPost_resp);
+       
         return userPost_resp;
     }
 
@@ -215,8 +215,6 @@ const handlerRefreshPage = function(k){
         
         const userPut = {email: user.email, name: user.name, lastname: user.lastname, age: user.age, phone: user.phone, password: user.password };
 
-        console.log(userPut);
-
         const config= { 
             method: 'PUT',
 
@@ -292,14 +290,12 @@ const handlerRefreshPage = function(k){
             const userSales_result_copy = JSON.parse(JSON.stringify(userSales_result));
             const userSales_status = userSales_actual.status;
             let userSales_resp = {message: userSales_message, result: userSales_result_copy, status: userSales_status};
-            console.log(userSales_resp);
+    
 
             if(userSales_resp.message == 'Success' && userSales_resp.status == 200 && userSales_resp.result){
 
-                console.log(userSales_resp.result.sales);
                 handlerRefreshUserSales(userSales_resp.result.sales);
                 SetTotalPagesUserSales(userSales_resp.result.totalpages);
-                console.log(userSales);
                 return {message: userSales_resp.message, result: userSales_resp.result, status: userSales_resp.status};
 
             }else{
@@ -322,8 +318,6 @@ const handlerRefreshPage = function(k){
     }
 
     const ApiUserSalePost = async function(userSalePost){
-
-        console.log(userSalePost);
 
         const config= { 
             method: 'POST',
@@ -390,7 +384,6 @@ const handlerRefreshPage = function(k){
             const userSalePost_resp = {message: userSalePost_message, result: userSalePost_result, status: userSalePost_status};
             const fileImageExist = fileExist(formData.get('file'));
             
-            console.log(formData.get('file'));
 
             if(userSalePost_resp.message == 'Posted' && userSalePost_resp.status == 201 && userSalePost_resp.result){
 
@@ -545,7 +538,6 @@ const handlerRefreshPage = function(k){
             const userSaleDelete_status = userSaleDelete_actual.status;
             const userSaleDelete_resp = {message: userSaleDelete_message, result: userSaleDelete_result, status: userSaleDelete_status};
 
-            console.log(userSaleDelete_resp);
 
             if(userSaleDelete_resp.message == 'Deleted' && userSaleDelete_resp.status == 200 && userSaleDelete_resp.result){
 

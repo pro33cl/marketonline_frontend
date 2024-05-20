@@ -26,11 +26,6 @@ function PageHome() {
   
   } = receiving;
 
-  
-  console.log(matrixProducts);
-  console.log("totalPages :"+totalPages);
-  console.log("page :"+page);
-
 
   
   return (

@@ -94,8 +94,7 @@ function Card(props) {
 
 
     const handlerButtonAdd = function(){
-        console.log("boton agregar apretado");
-        console.log("Count antes:"+count);
+       
         let count_formated;
         if(count<=0){
             count_formated = 1;
@@ -103,14 +102,14 @@ function Card(props) {
         else{
             count_formated = count;
         }
-        console.log("Count despues:"+count);
+        
         if(handlerCartTableIfExistProduct(id) == false){
-            console.log("opcion 1: no existe producto en carrito y se agrega");
+            
             handlerCartTablePostProduct({id: id, name: name, price: price, count: count_formated});
             SetCount(count_formated);
         }
         else{
-            console.log("opcion 2: existe producto en carrito y no se agrega");
+            
             return ;
         }
         console.log(cartTable);

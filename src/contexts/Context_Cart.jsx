@@ -21,12 +21,7 @@ const Context_Cart_Provider = ({children}) =>{
         });
         SetValorTotal(total);
         SetCountTotal(count);
-        console.log("cartTable actualizado");
-        console.log(cartTable);
-        console.log("valorTotal actualizado");
-        console.log(valorTotal);
-        console.log("countTotal actualizado");
-        console.log(countTotal);
+       
     }
 
     const handlerCartTablePostProduct = function(product){
@@ -36,10 +31,7 @@ const Context_Cart_Provider = ({children}) =>{
         const product_formated = {id: id, name: name, price: price, count: count, price_total: price_total};
         cartTable_copy = JSON.parse(JSON.stringify(cartTable));
         cartTable_copy.push(product_formated);
-        console.log("despues de agregar producto a la copia: ");
-        console.log(cartTable_copy);
-        console.log("cartTable: ");
-        console.log(cartTable);
+        
         handlerCartTableRefresh(cartTable_copy);
     };
 

@@ -19,7 +19,6 @@ const Context_Products_Provider = ({children}) =>{
 
     useEffect(()=>{
 
-        console.log(pagination);
         handlerMatrixProductsGet(pagination.category, pagination.search , pagination.orderby, pagination.limit, page);
      
       },[page, pagination]);
@@ -27,15 +26,8 @@ const Context_Products_Provider = ({children}) =>{
     
     const ApiProductsGet = async function(category, search, orderby, limit, page){
 
-        console.log(category);
-        console.log(search);
-        console.log(orderby);
-        console.log(limit);
-        console.log(page);
-
         const resp = await fetch(`${urlServer}/products/?category=${category}&search=${search}&orderby=${orderby}&limit=${limit}&page=${page}`);
         const products = await resp.json();
-        console.log(products);
         SetTotalPages(products.result.totalpages);
         return products.result.products;
     }
@@ -43,7 +35,6 @@ const Context_Products_Provider = ({children}) =>{
    
     const handlerMatrixProductsGet = async function(category, search, orderby, limit, page){
         const matrix = await ApiProductsGet(category, search, orderby, limit, page);
-        console.log(matrix);
         const matrix_copy = JSON.parse(JSON.stringify(matrix));
         SetMatrixProducts(matrix_copy);
     }
