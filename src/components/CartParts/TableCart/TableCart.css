@@ -49,6 +49,8 @@
     font-weight: bold;
     color: black;
     text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .cart-table-row-p2{
