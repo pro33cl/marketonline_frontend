@@ -126,12 +126,22 @@ function Card(props) {
         }
     };
 
+
+    const handlerCardMouseOver = function(e){
+
+        if(type_card == "detail_card"){
+            e.style.boxShadow = "none";
+        }else{
+            e.style.boxShadow = "3px 5px 16px -3px black";
+        }
+    }
+
     //----------------------------------------------------
     // RETURN
     //----------------------------------------------------
 
     return (
-        <div className='card border-dark' onMouseOver={type_card == "detail_card"? {boxShadow: "none"}:{boxShadow: "3px 5px 16px -3px black"}} style={type_card == "detail_card"? {width:"100%", borderStyle: "none"} : {width: "18rem", borderStyle: "solid"}}>
+        <div className='card border-dark' onMouseOver={handlerCardMouseOver} style={type_card == "detail_card"? {width:"100%", borderStyle: "none"} : {width: "18rem", borderStyle: "solid"}}>
             
             <div className='card-header bg-transparent' onClick={()=>{handlerButtonDetail(id)}} 
                 style={type_card == "detail_card"? 
