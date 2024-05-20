@@ -150,24 +150,24 @@
 @media(min-width: 992px){
 
     .cart-table-row-name{
-        width: 8rem;
+        width: 15rem;
     }
 
     .cart-table-row-p{
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 
     .cart-table-row-p2{
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 
     .cart-table-row-p3{
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 
     .cart-table-button{
 
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 
 }
