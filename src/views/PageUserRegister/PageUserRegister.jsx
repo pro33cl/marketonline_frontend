@@ -42,7 +42,7 @@ function PageUserRegister() {
 
     const handlerChange = function (e) {
       SetUserFormRegister({ ...userFormRegister, [e.target.name]: e.target.value });
-      console.log(userFormRegister);
+      
     }
   
     const handlerSubmit = async function (e) {
@@ -65,7 +65,6 @@ function PageUserRegister() {
 
           const userPost_resp = await handlerUserPost(userPost);
 
-          console.log(userPost_resp);
         
           if( userPost_resp.message == 'Posted' && userPost_resp.status == 201 && userPost_resp.result){
 

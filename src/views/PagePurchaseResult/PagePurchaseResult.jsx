@@ -1,8 +1,15 @@
-import React from 'react'
+import React from 'react';
+import Spinner from 'react-bootstrap/Spinner';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function PagePurchaseResult() {
   return (
-    <div>PagePurchaseResult</div>
+    <div style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center"}}>
+      <Spinner animation="border" role="status"></Spinner>
+      <div className='fs-4 fw-bold mt-3'>Redirigiendo a medio de pago ...</div>
+    </div>
+    
   )
 }
 

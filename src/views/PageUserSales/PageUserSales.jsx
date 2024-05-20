@@ -16,11 +16,6 @@ import '../PageUserSales/PageUserSales.css';
 
 function PageUserSales() {
 
-  useEffect(() => {
-
-    console.log(userSales);
-
-  }, []);
 
   const receiving = useContext(Context_User);
 
@@ -81,7 +76,6 @@ function PageUserSales() {
     SetEnabled(true);
     const index = FindIndexById(userSales, id);
     const userFormSale_actual = userSales[index];
-    console.log(userFormSale_actual);
     SetUserFormSale(userFormSale_actual);
     handlerShowImage(userFormSale_actual.image);
   }
@@ -97,8 +91,6 @@ function PageUserSales() {
   const handlerDelete = async function (id) {
 
     const userSaleDelete_resp = await handlerUserSaleDelete(id);
-
-    console.log(userSaleDelete_resp);
 
     if (userSaleDelete_resp.message == 'Deleted' && userSaleDelete_resp.status == 200 && userSaleDelete_resp) {
 
@@ -138,7 +130,6 @@ function PageUserSales() {
 
   const handlerChange = function (e) {
     SetUserFormSale({ ...userFormSale, [e.target.name]: e.target.value });
-    console.log(userFormSale);
   }
 
 
@@ -149,7 +140,7 @@ function PageUserSales() {
     const formSale = document.querySelector("#formSale");
     const formSaleFileInput = document.querySelector("#formfileinput");
     const formData = new FormData(formSale);
-    ;
+    
     if (edit == true) {
 
       const userSalePut_resp = await handlerUserSalePut(userFormSale.id, userFormSale, formData);
