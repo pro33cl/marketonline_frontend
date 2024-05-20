@@ -1,3 +1,5 @@
+/* width <=576px, CELLPHONE*/
+
 .cart-table-header{
     display: flex;
     flex-direction: column;
@@ -30,7 +32,7 @@
     flex-direction: row;
     justify-content: start;
     align-items: center;
-    width: 6rem;
+    width: 5rem;
 }
 
 .cart-table-row-img{
@@ -49,7 +51,7 @@
     font-weight: bold;
     color: black;
     text-overflow: ellipsis;
-    white-space: initial;
+    white-space: nowrap;
     overflow: hidden;
 }
 
@@ -116,4 +118,24 @@
     font-size: 1rem;
     text-align: center;
     border-radius: 1rem;
+}
+
+/* 576px < width < 992px , TABLETS*/
+@media(min-width: 576px){
+
+    .cart-table-row-name{
+        width: 8rem;
+    }
+
+
+
+}
+
+/* 992px < width, DESKTOP*/
+@media(min-width: 992px){
+
+    .cart-table-row-name{
+        width: 8rem;
+    }
+
 }
