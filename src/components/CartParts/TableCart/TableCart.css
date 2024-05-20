@@ -32,7 +32,7 @@
     flex-direction: row;
     justify-content: start;
     align-items: center;
-    width: 5rem;
+    width: 4rem;
 }
 
 .cart-table-row-img{
@@ -45,7 +45,7 @@
 
 .cart-table-row-p{
     margin: 0.2rem;
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     text-align:start;
     text-transform: capitalize;
     font-weight: bold;
@@ -127,7 +127,9 @@
         width: 8rem;
     }
 
-
+    .cart-table-row-p{
+        font-size: 0.8rem;
+    }
 
 }
 
@@ -136,6 +138,10 @@
 
     .cart-table-row-name{
         width: 8rem;
+    }
+
+    .cart-table-row-p{
+        font-size: 1rem;
     }
 
 }
