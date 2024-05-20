@@ -68,7 +68,7 @@ function Filter(props) {
         console.log(search);
         console.log(orderby);
 
-        const paginationActual = { category: category, search: search, orderby: orderby, limit: 10 };
+        const paginationActual = { category: category, search: search, orderby: orderby, limit: 9 };
         const paginationActual_copy = JSON.parse(JSON.stringify(paginationActual));
         console.log(paginationActual);
         SetPagination(paginationActual_copy);
@@ -76,7 +76,7 @@ function Filter(props) {
 
     const handlerClean = function (e) {
 
-        const paginationInit = { category: "", search: "", orderby: "id", order: "ASC", limit: 10 };
+        const paginationInit = { category: "", search: "", orderby: "id", order: "ASC", limit: 9 };
         const paginationInit_copy = JSON.parse(JSON.stringify(paginationInit));
         console.log(paginationInit);
         SetPagination(paginationInit_copy);

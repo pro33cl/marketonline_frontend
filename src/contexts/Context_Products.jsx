@@ -10,7 +10,7 @@ export const Context_Products = createContext();
 const Context_Products_Provider = ({children}) =>{
 
     const [matrixProducts, SetMatrixProducts] = useState([]);
-    const [pagination, SetPagination] = useState({category:"", search: "", orderby: "id_ASC", limit: 10});
+    const [pagination, SetPagination] = useState({category:"", search: "", orderby: "id_ASC", limit: 9});
     const [totalPages, SetTotalPages] = useState(1);
     const [page, SetPage] = useState(1);
 
