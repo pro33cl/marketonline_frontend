@@ -129,6 +129,7 @@ function Card(props) {
 
     const handlerCardMouseOver = function(e){
 
+        console.log(e);
         if(type_card == "detail_card"){
             e.style.boxShadow = "none";
         }else{
