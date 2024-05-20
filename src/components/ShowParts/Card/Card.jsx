@@ -17,15 +17,11 @@ function Card(props) {
     // DECLARACIÓN DE VARIABLES Y HOOKS
     //----------------------------------------------------
 
-    /*
-    type_card = {"gallery_card", "detail_card"}
-    product = {id, image, name, price, evaluation, description, seller}
-    */
-
 
     const {type_card, product} = props;
     const {id, image, name, price, evaluation, description, seller} = product;
     const receiving = useContext(Context_Cart);
+    const [isHover, SetIsHover] = useState(false);
 
 
     const {
@@ -126,6 +122,14 @@ function Card(props) {
         }
     };
 
+    const handlerMouseEnterCard = function(){
+        SetIsHover(true);
+    }
+
+    const handlerMouseLeaveCard = function(){
+        SetIsHover(false);
+    }
+
 
 
     //----------------------------------------------------
@@ -133,7 +137,7 @@ function Card(props) {
     //----------------------------------------------------
 
     return (
-        <div className={type_card == "detail_card"? 'card border-dark':'card shadow border-dark'} style={type_card == "detail_card"? {width:"100%", borderStyle: "none"} : {width: "18rem", borderStyle: "solid"}}>
+        <div className='card border-dark' onMouseEnter={handlerMouseEnterCard} onMouseLeave={handlerMouseLeaveCard} style={type_card == "detail_card"? {width:"100%", borderStyle: "none", boxShadow: "none" } : {width: "18rem", borderStyle: "solid", boxShadow: isHover == true? "3px 5px 16px -3px black": "none" }}>
             
             <div className='card-header bg-transparent' onClick={()=>{handlerButtonDetail(id)}} 
                 style={type_card == "detail_card"? 
