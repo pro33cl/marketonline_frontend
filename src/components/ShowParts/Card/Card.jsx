@@ -131,7 +131,7 @@ function Card(props) {
     //----------------------------------------------------
 
     return (
-        <div className='card border-dark' style={type_card == "detail_card"? {width:"100%", borderStyle: "none"} : {width: "18rem", borderStyle: "solid" }}>
+        <div className='card border-dark' style={type_card == "detail_card"? {width:"100%", borderStyle: "none"} : {width: "18rem", borderStyle: "solid", "&:hover":{boxShadow: "0 4px 5px -3px darkgray"}}}>
             
             <div className='card-header bg-transparent' onClick={()=>{handlerButtonDetail(id)}} 
                 style={type_card == "detail_card"? 
