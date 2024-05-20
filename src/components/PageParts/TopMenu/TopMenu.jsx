@@ -68,7 +68,6 @@ const TopMenu = (props) => {
           <Nav className="me-auto">
             <Nav.Link onClick={handlerNavbar} id='home'>Home</Nav.Link>
             <Nav.Link onClick={handlerNavbar} id='login'>Login</Nav.Link>
-            <Nav.Link onClick={handlerNavbar} id='user'>Usuario</Nav.Link>
             <Nav.Link onClick={handlerNavbar} id='cart'>
               {`Carrito ${cartCount}`}
             </Nav.Link>
